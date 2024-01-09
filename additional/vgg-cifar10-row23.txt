@@ -1,0 +1,121 @@
+args: {'dataset': 'CIFAR10', 'model_name': 'vgg16', 'model_weight': 'IMAGENET1K_V1', 'freeze_layers': 14, 'seed': 123, 'epochs': 30, 'use_gpu': True, 'train_valid_split': 0.1, 'filepath': '.pt', 'create_plot': True, 'batch_size': 128, 'lr': 0.0005, 'early_stop': True, 'early_stop_patience': 3, 'loss_delta': 0.0001}
+Loading data...Files already downloaded and verified
+train_size: 45000 valid_size: 5000
+ 0 features.0.weight            requires_grad = False  torch.Size([64, 3, 3, 3])
+ 1 features.0.bias              requires_grad = False  torch.Size([64])
+ 2 features.2.weight            requires_grad = False  torch.Size([64, 64, 3, 3])
+ 3 features.2.bias              requires_grad = False  torch.Size([64])
+ 4 features.5.weight            requires_grad = False  torch.Size([128, 64, 3, 3])
+ 5 features.5.bias              requires_grad = False  torch.Size([128])
+ 6 features.7.weight            requires_grad = False  torch.Size([128, 128, 3, 3])
+ 7 features.7.bias              requires_grad = False  torch.Size([128])
+ 8 features.10.weight           requires_grad = False  torch.Size([256, 128, 3, 3])
+ 9 features.10.bias             requires_grad = False  torch.Size([256])
+10 features.12.weight           requires_grad = False  torch.Size([256, 256, 3, 3])
+11 features.12.bias             requires_grad = False  torch.Size([256])
+12 features.14.weight           requires_grad = False  torch.Size([256, 256, 3, 3])
+13 features.14.bias             requires_grad = False  torch.Size([256])
+14 features.17.weight           requires_grad = True  torch.Size([512, 256, 3, 3])
+15 features.17.bias             requires_grad = True  torch.Size([512])
+16 features.19.weight           requires_grad = True  torch.Size([512, 512, 3, 3])
+17 features.19.bias             requires_grad = True  torch.Size([512])
+18 features.21.weight           requires_grad = True  torch.Size([512, 512, 3, 3])
+19 features.21.bias             requires_grad = True  torch.Size([512])
+20 features.24.weight           requires_grad = True  torch.Size([512, 512, 3, 3])
+21 features.24.bias             requires_grad = True  torch.Size([512])
+22 features.26.weight           requires_grad = True  torch.Size([512, 512, 3, 3])
+23 features.26.bias             requires_grad = True  torch.Size([512])
+24 features.28.weight           requires_grad = True  torch.Size([512, 512, 3, 3])
+25 features.28.bias             requires_grad = True  torch.Size([512])
+26 classifier.0.weight          requires_grad = True  torch.Size([4096, 25088])
+27 classifier.0.bias            requires_grad = True  torch.Size([4096])
+28 classifier.3.weight          requires_grad = True  torch.Size([4096, 4096])
+29 classifier.3.bias            requires_grad = True  torch.Size([4096])
+30 classifier.6.weight          requires_grad = True  torch.Size([10, 4096])
+31 classifier.6.bias            requires_grad = True  torch.Size([10])
+
+epoch: 01/30 | batch 000/351 | loss: 2.6460
+epoch: 01/30 | batch 100/351 | loss: 0.9559
+epoch: 01/30 | batch 200/351 | loss: 0.8146
+epoch: 01/30 | batch 300/351 | loss: 0.8935
+epoch: 01/30 train acc: 0.7719 valid acc: 0.7424
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Time elapsed: 0.54 min
+epoch: 02/30 | batch 000/351 | loss: 0.8623
+epoch: 02/30 | batch 100/351 | loss: 0.7468
+epoch: 02/30 | batch 200/351 | loss: 0.6444
+epoch: 02/30 | batch 300/351 | loss: 0.7120
+epoch: 02/30 train acc: 0.8073 valid acc: 0.7650
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Time elapsed: 0.96 min
+epoch: 03/30 | batch 000/351 | loss: 0.4702
+epoch: 03/30 | batch 100/351 | loss: 0.5068
+epoch: 03/30 | batch 200/351 | loss: 0.5566
+epoch: 03/30 | batch 300/351 | loss: 0.6556
+epoch: 03/30 train acc: 0.8230 valid acc: 0.7686
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Time elapsed: 1.36 min
+epoch: 04/30 | batch 000/351 | loss: 0.4959
+epoch: 04/30 | batch 100/351 | loss: 0.5128
+epoch: 04/30 | batch 200/351 | loss: 0.6641
+epoch: 04/30 | batch 300/351 | loss: 0.6110
+epoch: 04/30 train acc: 0.8617 valid acc: 0.8016
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Time elapsed: 1.77 min
+epoch: 05/30 | batch 000/351 | loss: 0.4529
+epoch: 05/30 | batch 100/351 | loss: 0.4123
+epoch: 05/30 | batch 200/351 | loss: 0.4091
+epoch: 05/30 | batch 300/351 | loss: 0.5883
+epoch: 05/30 train acc: 0.8814 valid acc: 0.8014
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Time elapsed: 2.20 min
+epoch: 06/30 | batch 000/351 | loss: 0.3432
+epoch: 06/30 | batch 100/351 | loss: 0.3595
+epoch: 06/30 | batch 200/351 | loss: 0.3577
+epoch: 06/30 | batch 300/351 | loss: 0.5444
+epoch: 06/30 train acc: 0.8945 valid acc: 0.8116
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Time elapsed: 2.62 min
+epoch: 07/30 | batch 000/351 | loss: 0.3225
+epoch: 07/30 | batch 100/351 | loss: 0.3469
+epoch: 07/30 | batch 200/351 | loss: 0.3210
+epoch: 07/30 | batch 300/351 | loss: 0.2563
+epoch: 07/30 train acc: 0.9051 valid acc: 0.8184
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Time elapsed: 3.05 min
+epoch: 08/30 | batch 000/351 | loss: 0.3656
+epoch: 08/30 | batch 100/351 | loss: 0.5310
+epoch: 08/30 | batch 200/351 | loss: 0.4443
+epoch: 08/30 | batch 300/351 | loss: 0.4245
+epoch: 08/30 train acc: 0.9144 valid acc: 0.8170
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Time elapsed: 3.47 min
+epoch: 09/30 | batch 000/351 | loss: 0.2238
+epoch: 09/30 | batch 100/351 | loss: 0.2801
+epoch: 09/30 | batch 200/351 | loss: 0.2482
+epoch: 09/30 | batch 300/351 | loss: 0.2554
+epoch: 09/30 train acc: 0.9094 valid acc: 0.7976
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Time elapsed: 3.88 min
+epoch: 10/30 | batch 000/351 | loss: 0.2368
+epoch: 10/30 | batch 100/351 | loss: 0.1524
+epoch: 10/30 | batch 200/351 | loss: 0.2979
+epoch: 10/30 | batch 300/351 | loss: 0.2911
+epoch: 10/30 train acc: 0.9284 valid acc: 0.8198
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Time elapsed: 4.28 min
+epoch: 11/30 | batch 000/351 | loss: 0.3105
+epoch: 11/30 | batch 100/351 | loss: 0.3041
+epoch: 11/30 | batch 200/351 | loss: 0.2350
+epoch: 11/30 | batch 300/351 | loss: 0.1856
+epoch: 11/30 train acc: 0.9330 valid acc: 0.8238
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Saving model...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001.pt
+Saving loss...to CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001-loss.pt
+Total training #epoch: 10
+Total training time: 6.16 min
+Loading data...Files already downloaded and verified
+test_size: 10000
+Loading model...from CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001.pt
+test acc: 0.8437
+Loading loss...from CIFAR10-vgg16-freeze14-batch128-epoch30-lr0.0005-earlystop3-0.0001.pt

@@ -1,0 +1,124 @@
+args: {'dataset': 'Fruits360', 'model_name': 'vgg16', 'model_weight': 'IMAGENET1K_V1', 'freeze_layers': 14, 'seed': 123, 'epochs': 10, 'use_gpu': True, 'train_valid_split': 0.1, 'filepath': '.pt', 'create_plot': True, 'batch_size': 128, 'lr': 0.0005, 'early_stop': False, 'early_stop_patience': 3, 'loss_delta': 0.0001}
+Loading data...train_size: 60923 valid_size: 6769
+ 0 features.0.weight            requires_grad = False  torch.Size([64, 3, 3, 3])
+ 1 features.0.bias              requires_grad = False  torch.Size([64])
+ 2 features.2.weight            requires_grad = False  torch.Size([64, 64, 3, 3])
+ 3 features.2.bias              requires_grad = False  torch.Size([64])
+ 4 features.5.weight            requires_grad = False  torch.Size([128, 64, 3, 3])
+ 5 features.5.bias              requires_grad = False  torch.Size([128])
+ 6 features.7.weight            requires_grad = False  torch.Size([128, 128, 3, 3])
+ 7 features.7.bias              requires_grad = False  torch.Size([128])
+ 8 features.10.weight           requires_grad = False  torch.Size([256, 128, 3, 3])
+ 9 features.10.bias             requires_grad = False  torch.Size([256])
+10 features.12.weight           requires_grad = False  torch.Size([256, 256, 3, 3])
+11 features.12.bias             requires_grad = False  torch.Size([256])
+12 features.14.weight           requires_grad = False  torch.Size([256, 256, 3, 3])
+13 features.14.bias             requires_grad = False  torch.Size([256])
+14 features.17.weight           requires_grad = True  torch.Size([512, 256, 3, 3])
+15 features.17.bias             requires_grad = True  torch.Size([512])
+16 features.19.weight           requires_grad = True  torch.Size([512, 512, 3, 3])
+17 features.19.bias             requires_grad = True  torch.Size([512])
+18 features.21.weight           requires_grad = True  torch.Size([512, 512, 3, 3])
+19 features.21.bias             requires_grad = True  torch.Size([512])
+20 features.24.weight           requires_grad = True  torch.Size([512, 512, 3, 3])
+21 features.24.bias             requires_grad = True  torch.Size([512])
+22 features.26.weight           requires_grad = True  torch.Size([512, 512, 3, 3])
+23 features.26.bias             requires_grad = True  torch.Size([512])
+24 features.28.weight           requires_grad = True  torch.Size([512, 512, 3, 3])
+25 features.28.bias             requires_grad = True  torch.Size([512])
+26 classifier.0.weight          requires_grad = True  torch.Size([4096, 25088])
+27 classifier.0.bias            requires_grad = True  torch.Size([4096])
+28 classifier.3.weight          requires_grad = True  torch.Size([4096, 4096])
+29 classifier.3.bias            requires_grad = True  torch.Size([4096])
+30 classifier.6.weight          requires_grad = True  torch.Size([131, 4096])
+31 classifier.6.bias            requires_grad = True  torch.Size([131])
+
+epoch: 01/10 | batch 000/475 | loss: 5.1382
+epoch: 01/10 | batch 100/475 | loss: 0.7733
+epoch: 01/10 | batch 200/475 | loss: 0.2178
+epoch: 01/10 | batch 300/475 | loss: 0.3453
+epoch: 01/10 | batch 400/475 | loss: 0.1886
+epoch: 01/10 train acc: 0.9645 valid acc: 0.9659
+Saving loss...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005-loss.pt
+Saving model...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005.pt
+Time elapsed: 9.08 min
+epoch: 02/10 | batch 000/475 | loss: 0.3390
+epoch: 02/10 | batch 100/475 | loss: 0.0476
+epoch: 02/10 | batch 200/475 | loss: 0.1570
+epoch: 02/10 | batch 300/475 | loss: 0.0486
+epoch: 02/10 | batch 400/475 | loss: 0.0657
+epoch: 02/10 train acc: 0.9793 valid acc: 0.9793
+Saving loss...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005-loss.pt
+Saving model...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005.pt
+Time elapsed: 17.67 min
+epoch: 03/10 | batch 000/475 | loss: 0.2224
+epoch: 03/10 | batch 100/475 | loss: 0.0953
+epoch: 03/10 | batch 200/475 | loss: 0.0234
+epoch: 03/10 | batch 300/475 | loss: 0.1931
+epoch: 03/10 | batch 400/475 | loss: 0.2641
+epoch: 03/10 train acc: 0.9733 valid acc: 0.9746
+Saving loss...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005-loss.pt
+Time elapsed: 38.27 min
+epoch: 04/10 | batch 000/475 | loss: 0.1007
+epoch: 04/10 | batch 100/475 | loss: 0.1207
+epoch: 04/10 | batch 200/475 | loss: 0.2066
+epoch: 04/10 | batch 300/475 | loss: 0.0508
+epoch: 04/10 | batch 400/475 | loss: 0.0091
+epoch: 04/10 train acc: 0.9910 valid acc: 0.9907
+Saving loss...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005-loss.pt
+Saving model...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005.pt
+Time elapsed: 69.93 min
+epoch: 05/10 | batch 000/475 | loss: 0.1654
+epoch: 05/10 | batch 100/475 | loss: 0.0897
+epoch: 05/10 | batch 200/475 | loss: 0.1595
+epoch: 05/10 | batch 300/475 | loss: 0.1974
+epoch: 05/10 | batch 400/475 | loss: 0.1000
+epoch: 05/10 train acc: 0.9796 valid acc: 0.9781
+Saving loss...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005-loss.pt
+Time elapsed: 90.63 min
+epoch: 06/10 | batch 000/475 | loss: 0.0552
+epoch: 06/10 | batch 100/475 | loss: 0.2243
+epoch: 06/10 | batch 200/475 | loss: 0.1713
+epoch: 06/10 | batch 300/475 | loss: 0.1075
+epoch: 06/10 | batch 400/475 | loss: 0.0021
+epoch: 06/10 train acc: 0.9938 valid acc: 0.9945
+Saving loss...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005-loss.pt
+Saving model...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005.pt
+Time elapsed: 101.72 min
+epoch: 07/10 | batch 000/475 | loss: 0.0005
+epoch: 07/10 | batch 100/475 | loss: 0.1926
+epoch: 07/10 | batch 200/475 | loss: 0.3352
+epoch: 07/10 | batch 300/475 | loss: 0.2238
+epoch: 07/10 | batch 400/475 | loss: 0.1068
+epoch: 07/10 train acc: 0.9939 valid acc: 0.9941
+Saving loss...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005-loss.pt
+Time elapsed: 106.90 min
+epoch: 08/10 | batch 000/475 | loss: 0.0035
+epoch: 08/10 | batch 100/475 | loss: 0.0534
+epoch: 08/10 | batch 200/475 | loss: 0.0588
+epoch: 08/10 | batch 300/475 | loss: 0.0741
+epoch: 08/10 | batch 400/475 | loss: 0.0153
+epoch: 08/10 train acc: 0.9876 valid acc: 0.9889
+Saving loss...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005-loss.pt
+Time elapsed: 109.07 min
+epoch: 09/10 | batch 000/475 | loss: 0.0143
+epoch: 09/10 | batch 100/475 | loss: 0.1010
+epoch: 09/10 | batch 200/475 | loss: 0.0418
+epoch: 09/10 | batch 300/475 | loss: 0.1127
+epoch: 09/10 | batch 400/475 | loss: 0.1353
+epoch: 09/10 train acc: 0.9899 valid acc: 0.9905
+Saving loss...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005-loss.pt
+Time elapsed: 111.25 min
+epoch: 10/10 | batch 000/475 | loss: 0.1909
+epoch: 10/10 | batch 100/475 | loss: 0.0055
+epoch: 10/10 | batch 200/475 | loss: 0.0581
+epoch: 10/10 | batch 300/475 | loss: 0.0062
+epoch: 10/10 | batch 400/475 | loss: 0.2346
+epoch: 10/10 train acc: 0.9635 valid acc: 0.9594
+Saving loss...to Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005-loss.pt
+Time elapsed: 113.42 min
+Total training time: 113.42 min
+Loading data...test_size: 22688
+Loading model...from Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005.pt
+test acc: 0.9626
+Loading loss...from Fruits360-vgg16-freeze14-batch128-epoch10-lr0.0005.pt

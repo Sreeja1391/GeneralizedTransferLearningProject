@@ -1,0 +1,420 @@
+args: {'dataset': 'CIFAR10', 'model_name': 'resnet18', 'model_weight': 'IMAGENET1K_V1', 'freeze_layers': 0, 'seed': 123, 'epochs': 30, 'use_gpu': True, 'train_valid_split': 0.1, 'filepath': '.pt', 'create_plot': True, 'batch_size': 64, 'lr': 0.01, 'early_stop': False, 'early_stop_patience': 3, 'loss_delta': 0.0001}
+Loading data...Files already downloaded and verified
+train_size: 45000 valid_size: 5000
+ 0 conv1.weight                 requires_grad = True  torch.Size([64, 3, 7, 7])
+ 1 bn1.weight                   requires_grad = True  torch.Size([64])
+ 2 bn1.bias                     requires_grad = True  torch.Size([64])
+ 3 layer1.0.conv1.weight        requires_grad = True  torch.Size([64, 64, 3, 3])
+ 4 layer1.0.bn1.weight          requires_grad = True  torch.Size([64])
+ 5 layer1.0.bn1.bias            requires_grad = True  torch.Size([64])
+ 6 layer1.0.conv2.weight        requires_grad = True  torch.Size([64, 64, 3, 3])
+ 7 layer1.0.bn2.weight          requires_grad = True  torch.Size([64])
+ 8 layer1.0.bn2.bias            requires_grad = True  torch.Size([64])
+ 9 layer1.1.conv1.weight        requires_grad = True  torch.Size([64, 64, 3, 3])
+10 layer1.1.bn1.weight          requires_grad = True  torch.Size([64])
+11 layer1.1.bn1.bias            requires_grad = True  torch.Size([64])
+12 layer1.1.conv2.weight        requires_grad = True  torch.Size([64, 64, 3, 3])
+13 layer1.1.bn2.weight          requires_grad = True  torch.Size([64])
+14 layer1.1.bn2.bias            requires_grad = True  torch.Size([64])
+15 layer2.0.conv1.weight        requires_grad = True  torch.Size([128, 64, 3, 3])
+16 layer2.0.bn1.weight          requires_grad = True  torch.Size([128])
+17 layer2.0.bn1.bias            requires_grad = True  torch.Size([128])
+18 layer2.0.conv2.weight        requires_grad = True  torch.Size([128, 128, 3, 3])
+19 layer2.0.bn2.weight          requires_grad = True  torch.Size([128])
+20 layer2.0.bn2.bias            requires_grad = True  torch.Size([128])
+21 layer2.0.downsample.0.weight requires_grad = True  torch.Size([128, 64, 1, 1])
+22 layer2.0.downsample.1.weight requires_grad = True  torch.Size([128])
+23 layer2.0.downsample.1.bias   requires_grad = True  torch.Size([128])
+24 layer2.1.conv1.weight        requires_grad = True  torch.Size([128, 128, 3, 3])
+25 layer2.1.bn1.weight          requires_grad = True  torch.Size([128])
+26 layer2.1.bn1.bias            requires_grad = True  torch.Size([128])
+27 layer2.1.conv2.weight        requires_grad = True  torch.Size([128, 128, 3, 3])
+28 layer2.1.bn2.weight          requires_grad = True  torch.Size([128])
+29 layer2.1.bn2.bias            requires_grad = True  torch.Size([128])
+30 layer3.0.conv1.weight        requires_grad = True  torch.Size([256, 128, 3, 3])
+31 layer3.0.bn1.weight          requires_grad = True  torch.Size([256])
+32 layer3.0.bn1.bias            requires_grad = True  torch.Size([256])
+33 layer3.0.conv2.weight        requires_grad = True  torch.Size([256, 256, 3, 3])
+34 layer3.0.bn2.weight          requires_grad = True  torch.Size([256])
+35 layer3.0.bn2.bias            requires_grad = True  torch.Size([256])
+36 layer3.0.downsample.0.weight requires_grad = True  torch.Size([256, 128, 1, 1])
+37 layer3.0.downsample.1.weight requires_grad = True  torch.Size([256])
+38 layer3.0.downsample.1.bias   requires_grad = True  torch.Size([256])
+39 layer3.1.conv1.weight        requires_grad = True  torch.Size([256, 256, 3, 3])
+40 layer3.1.bn1.weight          requires_grad = True  torch.Size([256])
+41 layer3.1.bn1.bias            requires_grad = True  torch.Size([256])
+42 layer3.1.conv2.weight        requires_grad = True  torch.Size([256, 256, 3, 3])
+43 layer3.1.bn2.weight          requires_grad = True  torch.Size([256])
+44 layer3.1.bn2.bias            requires_grad = True  torch.Size([256])
+45 layer4.0.conv1.weight        requires_grad = True  torch.Size([512, 256, 3, 3])
+46 layer4.0.bn1.weight          requires_grad = True  torch.Size([512])
+47 layer4.0.bn1.bias            requires_grad = True  torch.Size([512])
+48 layer4.0.conv2.weight        requires_grad = True  torch.Size([512, 512, 3, 3])
+49 layer4.0.bn2.weight          requires_grad = True  torch.Size([512])
+50 layer4.0.bn2.bias            requires_grad = True  torch.Size([512])
+51 layer4.0.downsample.0.weight requires_grad = True  torch.Size([512, 256, 1, 1])
+52 layer4.0.downsample.1.weight requires_grad = True  torch.Size([512])
+53 layer4.0.downsample.1.bias   requires_grad = True  torch.Size([512])
+54 layer4.1.conv1.weight        requires_grad = True  torch.Size([512, 512, 3, 3])
+55 layer4.1.bn1.weight          requires_grad = True  torch.Size([512])
+56 layer4.1.bn1.bias            requires_grad = True  torch.Size([512])
+57 layer4.1.conv2.weight        requires_grad = True  torch.Size([512, 512, 3, 3])
+58 layer4.1.bn2.weight          requires_grad = True  torch.Size([512])
+59 layer4.1.bn2.bias            requires_grad = True  torch.Size([512])
+60 fc.weight                    requires_grad = True  torch.Size([10, 512])
+61 fc.bias                      requires_grad = True  torch.Size([10])
+
+epoch: 01/30 | batch 000/703 | loss: 2.6352
+epoch: 01/30 | batch 100/703 | loss: 3.7205
+epoch: 01/30 | batch 200/703 | loss: 2.3378
+epoch: 01/30 | batch 300/703 | loss: 1.9525
+epoch: 01/30 | batch 400/703 | loss: 2.5571
+epoch: 01/30 | batch 500/703 | loss: 1.8986
+epoch: 01/30 | batch 600/703 | loss: 1.6766
+epoch: 01/30 | batch 700/703 | loss: 1.7419
+epoch: 01/30 train acc: 0.3593 valid acc: 0.3494
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 0.67 min
+epoch: 02/30 | batch 000/703 | loss: 1.9761
+epoch: 02/30 | batch 100/703 | loss: 1.7486
+epoch: 02/30 | batch 200/703 | loss: 1.7212
+epoch: 02/30 | batch 300/703 | loss: 1.6796
+epoch: 02/30 | batch 400/703 | loss: 1.4446
+epoch: 02/30 | batch 500/703 | loss: 1.3832
+epoch: 02/30 | batch 600/703 | loss: 1.4780
+epoch: 02/30 | batch 700/703 | loss: 1.1590
+epoch: 02/30 train acc: 0.4841 valid acc: 0.4702
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 1.18 min
+epoch: 03/30 | batch 000/703 | loss: 1.3442
+epoch: 03/30 | batch 100/703 | loss: 1.4406
+epoch: 03/30 | batch 200/703 | loss: 1.4586
+epoch: 03/30 | batch 300/703 | loss: 1.2632
+epoch: 03/30 | batch 400/703 | loss: 1.2679
+epoch: 03/30 | batch 500/703 | loss: 1.3707
+epoch: 03/30 | batch 600/703 | loss: 1.3234
+epoch: 03/30 | batch 700/703 | loss: 1.2787
+epoch: 03/30 train acc: 0.5578 valid acc: 0.5350
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 1.69 min
+epoch: 04/30 | batch 000/703 | loss: 0.9784
+epoch: 04/30 | batch 100/703 | loss: 1.2610
+epoch: 04/30 | batch 200/703 | loss: 1.4791
+epoch: 04/30 | batch 300/703 | loss: 1.2522
+epoch: 04/30 | batch 400/703 | loss: 1.2393
+epoch: 04/30 | batch 500/703 | loss: 1.1482
+epoch: 04/30 | batch 600/703 | loss: 1.2860
+epoch: 04/30 | batch 700/703 | loss: 1.0304
+epoch: 04/30 train acc: 0.6194 valid acc: 0.5868
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 2.21 min
+epoch: 05/30 | batch 000/703 | loss: 1.1372
+epoch: 05/30 | batch 100/703 | loss: 1.1651
+epoch: 05/30 | batch 200/703 | loss: 1.1064
+epoch: 05/30 | batch 300/703 | loss: 0.9201
+epoch: 05/30 | batch 400/703 | loss: 1.1965
+epoch: 05/30 | batch 500/703 | loss: 1.0664
+epoch: 05/30 | batch 600/703 | loss: 0.8248
+epoch: 05/30 | batch 700/703 | loss: 1.0862
+epoch: 05/30 train acc: 0.6357 valid acc: 0.5960
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 2.75 min
+epoch: 06/30 | batch 000/703 | loss: 0.9334
+epoch: 06/30 | batch 100/703 | loss: 1.0921
+epoch: 06/30 | batch 200/703 | loss: 1.0748
+epoch: 06/30 | batch 300/703 | loss: 0.9336
+epoch: 06/30 | batch 400/703 | loss: 1.1238
+epoch: 06/30 | batch 500/703 | loss: 1.2181
+epoch: 06/30 | batch 600/703 | loss: 1.1442
+epoch: 06/30 | batch 700/703 | loss: 0.7387
+epoch: 06/30 train acc: 0.6530 valid acc: 0.6164
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 3.27 min
+epoch: 07/30 | batch 000/703 | loss: 0.8554
+epoch: 07/30 | batch 100/703 | loss: 0.8763
+epoch: 07/30 | batch 200/703 | loss: 0.9686
+epoch: 07/30 | batch 300/703 | loss: 0.7528
+epoch: 07/30 | batch 400/703 | loss: 0.7045
+epoch: 07/30 | batch 500/703 | loss: 0.7300
+epoch: 07/30 | batch 600/703 | loss: 0.7012
+epoch: 07/30 | batch 700/703 | loss: 0.6644
+epoch: 07/30 train acc: 0.7155 valid acc: 0.6572
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 3.69 min
+epoch: 08/30 | batch 000/703 | loss: 0.9665
+epoch: 08/30 | batch 100/703 | loss: 0.7980
+epoch: 08/30 | batch 200/703 | loss: 0.9769
+epoch: 08/30 | batch 300/703 | loss: 0.8987
+epoch: 08/30 | batch 400/703 | loss: 0.7364
+epoch: 08/30 | batch 500/703 | loss: 0.8267
+epoch: 08/30 | batch 600/703 | loss: 0.9386
+epoch: 08/30 | batch 700/703 | loss: 0.7962
+epoch: 08/30 train acc: 0.7240 valid acc: 0.6588
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 4.19 min
+epoch: 09/30 | batch 000/703 | loss: 0.7197
+epoch: 09/30 | batch 100/703 | loss: 1.0091
+epoch: 09/30 | batch 200/703 | loss: 0.8194
+epoch: 09/30 | batch 300/703 | loss: 1.2917
+epoch: 09/30 | batch 400/703 | loss: 0.6107
+epoch: 09/30 | batch 500/703 | loss: 0.7362
+epoch: 09/30 | batch 600/703 | loss: 0.8169
+epoch: 09/30 | batch 700/703 | loss: 0.8793
+epoch: 09/30 train acc: 0.7474 valid acc: 0.6726
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 4.66 min
+epoch: 10/30 | batch 000/703 | loss: 0.7665
+epoch: 10/30 | batch 100/703 | loss: 0.7339
+epoch: 10/30 | batch 200/703 | loss: 0.6725
+epoch: 10/30 | batch 300/703 | loss: 0.5283
+epoch: 10/30 | batch 400/703 | loss: 0.5169
+epoch: 10/30 | batch 500/703 | loss: 0.6109
+epoch: 10/30 | batch 600/703 | loss: 0.7520
+epoch: 10/30 | batch 700/703 | loss: 0.6813
+epoch: 10/30 train acc: 0.7737 valid acc: 0.6980
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 5.17 min
+epoch: 11/30 | batch 000/703 | loss: 0.6979
+epoch: 11/30 | batch 100/703 | loss: 0.4416
+epoch: 11/30 | batch 200/703 | loss: 0.6440
+epoch: 11/30 | batch 300/703 | loss: 0.6746
+epoch: 11/30 | batch 400/703 | loss: 0.7013
+epoch: 11/30 | batch 500/703 | loss: 0.7668
+epoch: 11/30 | batch 600/703 | loss: 0.5853
+epoch: 11/30 | batch 700/703 | loss: 0.8078
+epoch: 11/30 train acc: 0.8028 valid acc: 0.7128
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 5.71 min
+epoch: 12/30 | batch 000/703 | loss: 0.5829
+epoch: 12/30 | batch 100/703 | loss: 0.8254
+epoch: 12/30 | batch 200/703 | loss: 0.5674
+epoch: 12/30 | batch 300/703 | loss: 0.6363
+epoch: 12/30 | batch 400/703 | loss: 0.3969
+epoch: 12/30 | batch 500/703 | loss: 0.6481
+epoch: 12/30 | batch 600/703 | loss: 0.7891
+epoch: 12/30 | batch 700/703 | loss: 0.7276
+epoch: 12/30 train acc: 0.8215 valid acc: 0.7080
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 6.15 min
+epoch: 13/30 | batch 000/703 | loss: 0.5090
+epoch: 13/30 | batch 100/703 | loss: 0.6373
+epoch: 13/30 | batch 200/703 | loss: 0.5771
+epoch: 13/30 | batch 300/703 | loss: 0.5315
+epoch: 13/30 | batch 400/703 | loss: 0.7378
+epoch: 13/30 | batch 500/703 | loss: 0.4915
+epoch: 13/30 | batch 600/703 | loss: 0.6038
+epoch: 13/30 | batch 700/703 | loss: 0.6690
+epoch: 13/30 train acc: 0.8203 valid acc: 0.7022
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 6.54 min
+epoch: 14/30 | batch 000/703 | loss: 0.4534
+epoch: 14/30 | batch 100/703 | loss: 0.5190
+epoch: 14/30 | batch 200/703 | loss: 0.5793
+epoch: 14/30 | batch 300/703 | loss: 0.4656
+epoch: 14/30 | batch 400/703 | loss: 0.6792
+epoch: 14/30 | batch 500/703 | loss: 0.6422
+epoch: 14/30 | batch 600/703 | loss: 0.6077
+epoch: 14/30 | batch 700/703 | loss: 0.7153
+epoch: 14/30 train acc: 0.8354 valid acc: 0.7192
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 6.97 min
+epoch: 15/30 | batch 000/703 | loss: 0.5347
+epoch: 15/30 | batch 100/703 | loss: 0.5481
+epoch: 15/30 | batch 200/703 | loss: 0.5125
+epoch: 15/30 | batch 300/703 | loss: 0.5794
+epoch: 15/30 | batch 400/703 | loss: 0.6201
+epoch: 15/30 | batch 500/703 | loss: 0.7437
+epoch: 15/30 | batch 600/703 | loss: 0.6964
+epoch: 15/30 | batch 700/703 | loss: 0.5293
+epoch: 15/30 train acc: 0.8412 valid acc: 0.7024
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 7.39 min
+epoch: 16/30 | batch 000/703 | loss: 0.4847
+epoch: 16/30 | batch 100/703 | loss: 0.4873
+epoch: 16/30 | batch 200/703 | loss: 0.4060
+epoch: 16/30 | batch 300/703 | loss: 0.5001
+epoch: 16/30 | batch 400/703 | loss: 0.6662
+epoch: 16/30 | batch 500/703 | loss: 0.5266
+epoch: 16/30 | batch 600/703 | loss: 0.4979
+epoch: 16/30 | batch 700/703 | loss: 0.5660
+epoch: 16/30 train acc: 0.8593 valid acc: 0.7214
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 7.93 min
+epoch: 17/30 | batch 000/703 | loss: 0.4940
+epoch: 17/30 | batch 100/703 | loss: 0.4470
+epoch: 17/30 | batch 200/703 | loss: 0.5934
+epoch: 17/30 | batch 300/703 | loss: 0.5602
+epoch: 17/30 | batch 400/703 | loss: 0.6236
+epoch: 17/30 | batch 500/703 | loss: 0.4980
+epoch: 17/30 | batch 600/703 | loss: 0.6316
+epoch: 17/30 | batch 700/703 | loss: 0.5896
+epoch: 17/30 train acc: 0.8656 valid acc: 0.7222
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 8.53 min
+epoch: 18/30 | batch 000/703 | loss: 0.5181
+epoch: 18/30 | batch 100/703 | loss: 0.5733
+epoch: 18/30 | batch 200/703 | loss: 0.8781
+epoch: 18/30 | batch 300/703 | loss: 0.4652
+epoch: 18/30 | batch 400/703 | loss: 0.4408
+epoch: 18/30 | batch 500/703 | loss: 0.6124
+epoch: 18/30 | batch 600/703 | loss: 0.4617
+epoch: 18/30 | batch 700/703 | loss: 0.5597
+epoch: 18/30 train acc: 0.8660 valid acc: 0.7184
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 8.98 min
+epoch: 19/30 | batch 000/703 | loss: 0.3970
+epoch: 19/30 | batch 100/703 | loss: 0.2723
+epoch: 19/30 | batch 200/703 | loss: 0.3799
+epoch: 19/30 | batch 300/703 | loss: 0.3616
+epoch: 19/30 | batch 400/703 | loss: 0.4806
+epoch: 19/30 | batch 500/703 | loss: 0.4054
+epoch: 19/30 | batch 600/703 | loss: 0.4044
+epoch: 19/30 | batch 700/703 | loss: 0.2659
+epoch: 19/30 train acc: 0.8778 valid acc: 0.7162
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 9.42 min
+epoch: 20/30 | batch 000/703 | loss: 0.4073
+epoch: 20/30 | batch 100/703 | loss: 0.3679
+epoch: 20/30 | batch 200/703 | loss: 0.4270
+epoch: 20/30 | batch 300/703 | loss: 0.4927
+epoch: 20/30 | batch 400/703 | loss: 0.1954
+epoch: 20/30 | batch 500/703 | loss: 0.3423
+epoch: 20/30 | batch 600/703 | loss: 0.4415
+epoch: 20/30 | batch 700/703 | loss: 0.3877
+epoch: 20/30 train acc: 0.8950 valid acc: 0.7238
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 9.97 min
+epoch: 21/30 | batch 000/703 | loss: 0.2366
+epoch: 21/30 | batch 100/703 | loss: 0.3385
+epoch: 21/30 | batch 200/703 | loss: 0.4946
+epoch: 21/30 | batch 300/703 | loss: 0.3944
+epoch: 21/30 | batch 400/703 | loss: 0.2910
+epoch: 21/30 | batch 500/703 | loss: 0.3485
+epoch: 21/30 | batch 600/703 | loss: 0.2128
+epoch: 21/30 | batch 700/703 | loss: 0.2604
+epoch: 21/30 train acc: 0.8787 valid acc: 0.7076
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 10.36 min
+epoch: 22/30 | batch 000/703 | loss: 0.4629
+epoch: 22/30 | batch 100/703 | loss: 0.2995
+epoch: 22/30 | batch 200/703 | loss: 0.3242
+epoch: 22/30 | batch 300/703 | loss: 0.4585
+epoch: 22/30 | batch 400/703 | loss: 0.2691
+epoch: 22/30 | batch 500/703 | loss: 0.2702
+epoch: 22/30 | batch 600/703 | loss: 0.2717
+epoch: 22/30 | batch 700/703 | loss: 0.3847
+epoch: 22/30 train acc: 0.9043 valid acc: 0.7208
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 10.71 min
+epoch: 23/30 | batch 000/703 | loss: 0.2709
+epoch: 23/30 | batch 100/703 | loss: 0.5203
+epoch: 23/30 | batch 200/703 | loss: 0.2677
+epoch: 23/30 | batch 300/703 | loss: 0.2280
+epoch: 23/30 | batch 400/703 | loss: 0.1791
+epoch: 23/30 | batch 500/703 | loss: 0.1143
+epoch: 23/30 | batch 600/703 | loss: 0.1988
+epoch: 23/30 | batch 700/703 | loss: 0.2595
+epoch: 23/30 train acc: 0.9095 valid acc: 0.7200
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 11.14 min
+epoch: 24/30 | batch 000/703 | loss: 0.2664
+epoch: 24/30 | batch 100/703 | loss: 0.3618
+epoch: 24/30 | batch 200/703 | loss: 0.2305
+epoch: 24/30 | batch 300/703 | loss: 0.5988
+epoch: 24/30 | batch 400/703 | loss: 0.2633
+epoch: 24/30 | batch 500/703 | loss: 0.2461
+epoch: 24/30 | batch 600/703 | loss: 0.2297
+epoch: 24/30 | batch 700/703 | loss: 0.2973
+epoch: 24/30 train acc: 0.9161 valid acc: 0.7288
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 11.67 min
+epoch: 25/30 | batch 000/703 | loss: 0.1996
+epoch: 25/30 | batch 100/703 | loss: 0.1070
+epoch: 25/30 | batch 200/703 | loss: 0.3130
+epoch: 25/30 | batch 300/703 | loss: 0.3245
+epoch: 25/30 | batch 400/703 | loss: 0.2393
+epoch: 25/30 | batch 500/703 | loss: 0.3089
+epoch: 25/30 | batch 600/703 | loss: 0.2756
+epoch: 25/30 | batch 700/703 | loss: 0.2947
+epoch: 25/30 train acc: 0.9188 valid acc: 0.7312
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 12.13 min
+epoch: 26/30 | batch 000/703 | loss: 0.1676
+epoch: 26/30 | batch 100/703 | loss: 0.3384
+epoch: 26/30 | batch 200/703 | loss: 0.3943
+epoch: 26/30 | batch 300/703 | loss: 0.3181
+epoch: 26/30 | batch 400/703 | loss: 0.1987
+epoch: 26/30 | batch 500/703 | loss: 0.2756
+epoch: 26/30 | batch 600/703 | loss: 0.2316
+epoch: 26/30 | batch 700/703 | loss: 0.3799
+epoch: 26/30 train acc: 0.9182 valid acc: 0.7236
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 12.54 min
+epoch: 27/30 | batch 000/703 | loss: 0.1685
+epoch: 27/30 | batch 100/703 | loss: 0.2153
+epoch: 27/30 | batch 200/703 | loss: 0.3124
+epoch: 27/30 | batch 300/703 | loss: 0.7782
+epoch: 27/30 | batch 400/703 | loss: 0.3948
+epoch: 27/30 | batch 500/703 | loss: 0.3468
+epoch: 27/30 | batch 600/703 | loss: 0.4225
+epoch: 27/30 | batch 700/703 | loss: 0.4436
+epoch: 27/30 train acc: 0.9283 valid acc: 0.7250
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 12.97 min
+epoch: 28/30 | batch 000/703 | loss: 0.3329
+epoch: 28/30 | batch 100/703 | loss: 0.3652
+epoch: 28/30 | batch 200/703 | loss: 0.1459
+epoch: 28/30 | batch 300/703 | loss: 0.2191
+epoch: 28/30 | batch 400/703 | loss: 0.2179
+epoch: 28/30 | batch 500/703 | loss: 0.2848
+epoch: 28/30 | batch 600/703 | loss: 0.5584
+epoch: 28/30 | batch 700/703 | loss: 0.3436
+epoch: 28/30 train acc: 0.9261 valid acc: 0.7246
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 13.35 min
+epoch: 29/30 | batch 000/703 | loss: 0.2565
+epoch: 29/30 | batch 100/703 | loss: 0.3208
+epoch: 29/30 | batch 200/703 | loss: 0.3095
+epoch: 29/30 | batch 300/703 | loss: 0.3361
+epoch: 29/30 | batch 400/703 | loss: 0.3023
+epoch: 29/30 | batch 500/703 | loss: 0.3462
+epoch: 29/30 | batch 600/703 | loss: 0.2917
+epoch: 29/30 | batch 700/703 | loss: 0.4211
+epoch: 29/30 train acc: 0.9359 valid acc: 0.7360
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Saving model...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+Time elapsed: 13.89 min
+epoch: 30/30 | batch 000/703 | loss: 0.3030
+epoch: 30/30 | batch 100/703 | loss: 0.2797
+epoch: 30/30 | batch 200/703 | loss: 0.3340
+epoch: 30/30 | batch 300/703 | loss: 0.2206
+epoch: 30/30 | batch 400/703 | loss: 0.3398
+epoch: 30/30 | batch 500/703 | loss: 0.1061
+epoch: 30/30 | batch 600/703 | loss: 0.2110
+epoch: 30/30 | batch 700/703 | loss: 0.2345
+epoch: 30/30 train acc: 0.9348 valid acc: 0.7360
+Saving loss...to CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01-loss.pt
+Time elapsed: 14.31 min
+Total training time: 14.31 min
+Loading data...Files already downloaded and verified
+test_size: 10000
+Loading model...from CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
+test acc: 0.7394
+Loading loss...from CIFAR10-resnet18-freeze0-batch64-epoch30-lr0.01.pt
