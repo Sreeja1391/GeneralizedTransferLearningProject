@@ -1,0 +1,258 @@
+args: {'dataset': 'CIFAR10', 'model_name': 'vgg16', 'model_weight': 'IMAGENET1K_V1', 'freeze_layers': 30, 'seed': 123, 'epochs': 30, 'use_gpu': True, 'train_valid_split': 0.1, 'filepath': '.pt', 'create_plot': True, 'batch_size': 128, 'lr': 0.0005, 'early_stop': False, 'early_stop_patience': 3, 'loss_delta': 0.0001}
+Loading data...Files already downloaded and verified
+train_size: 45000 valid_size: 5000
+ 0 features.0.weight            requires_grad = False  torch.Size([64, 3, 3, 3])
+ 1 features.0.bias              requires_grad = False  torch.Size([64])
+ 2 features.2.weight            requires_grad = False  torch.Size([64, 64, 3, 3])
+ 3 features.2.bias              requires_grad = False  torch.Size([64])
+ 4 features.5.weight            requires_grad = False  torch.Size([128, 64, 3, 3])
+ 5 features.5.bias              requires_grad = False  torch.Size([128])
+ 6 features.7.weight            requires_grad = False  torch.Size([128, 128, 3, 3])
+ 7 features.7.bias              requires_grad = False  torch.Size([128])
+ 8 features.10.weight           requires_grad = False  torch.Size([256, 128, 3, 3])
+ 9 features.10.bias             requires_grad = False  torch.Size([256])
+10 features.12.weight           requires_grad = False  torch.Size([256, 256, 3, 3])
+11 features.12.bias             requires_grad = False  torch.Size([256])
+12 features.14.weight           requires_grad = False  torch.Size([256, 256, 3, 3])
+13 features.14.bias             requires_grad = False  torch.Size([256])
+14 features.17.weight           requires_grad = False  torch.Size([512, 256, 3, 3])
+15 features.17.bias             requires_grad = False  torch.Size([512])
+16 features.19.weight           requires_grad = False  torch.Size([512, 512, 3, 3])
+17 features.19.bias             requires_grad = False  torch.Size([512])
+18 features.21.weight           requires_grad = False  torch.Size([512, 512, 3, 3])
+19 features.21.bias             requires_grad = False  torch.Size([512])
+20 features.24.weight           requires_grad = False  torch.Size([512, 512, 3, 3])
+21 features.24.bias             requires_grad = False  torch.Size([512])
+22 features.26.weight           requires_grad = False  torch.Size([512, 512, 3, 3])
+23 features.26.bias             requires_grad = False  torch.Size([512])
+24 features.28.weight           requires_grad = False  torch.Size([512, 512, 3, 3])
+25 features.28.bias             requires_grad = False  torch.Size([512])
+26 classifier.0.weight          requires_grad = False  torch.Size([4096, 25088])
+27 classifier.0.bias            requires_grad = False  torch.Size([4096])
+28 classifier.3.weight          requires_grad = False  torch.Size([4096, 4096])
+29 classifier.3.bias            requires_grad = False  torch.Size([4096])
+30 classifier.6.weight          requires_grad = True  torch.Size([10, 4096])
+31 classifier.6.bias            requires_grad = True  torch.Size([10])
+
+epoch: 01/30 | batch 000/351 | loss: 2.6460
+epoch: 01/30 | batch 100/351 | loss: 1.5063
+epoch: 01/30 | batch 200/351 | loss: 1.3598
+epoch: 01/30 | batch 300/351 | loss: 1.3125
+epoch: 01/30 train acc: 0.5552 valid acc: 0.5378
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Saving model...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005.pt
+Time elapsed: 1.09 min
+epoch: 02/30 | batch 000/351 | loss: 1.4300
+epoch: 02/30 | batch 100/351 | loss: 1.4447
+epoch: 02/30 | batch 200/351 | loss: 1.3304
+epoch: 02/30 | batch 300/351 | loss: 1.2232
+epoch: 02/30 train acc: 0.5708 valid acc: 0.5498
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Saving model...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005.pt
+Time elapsed: 1.83 min
+epoch: 03/30 | batch 000/351 | loss: 1.2127
+epoch: 03/30 | batch 100/351 | loss: 1.4405
+epoch: 03/30 | batch 200/351 | loss: 1.4840
+epoch: 03/30 | batch 300/351 | loss: 1.2760
+epoch: 03/30 train acc: 0.5778 valid acc: 0.5510
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Saving model...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005.pt
+Time elapsed: 2.52 min
+epoch: 04/30 | batch 000/351 | loss: 1.3867
+epoch: 04/30 | batch 100/351 | loss: 1.3565
+epoch: 04/30 | batch 200/351 | loss: 1.4382
+epoch: 04/30 | batch 300/351 | loss: 1.4537
+epoch: 04/30 train acc: 0.5827 valid acc: 0.5536
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Saving model...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005.pt
+Time elapsed: 3.28 min
+epoch: 05/30 | batch 000/351 | loss: 1.3098
+epoch: 05/30 | batch 100/351 | loss: 1.3958
+epoch: 05/30 | batch 200/351 | loss: 1.4951
+epoch: 05/30 | batch 300/351 | loss: 1.3633
+epoch: 05/30 train acc: 0.5810 valid acc: 0.5602
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Saving model...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005.pt
+Time elapsed: 4.05 min
+epoch: 06/30 | batch 000/351 | loss: 1.3861
+epoch: 06/30 | batch 100/351 | loss: 1.2606
+epoch: 06/30 | batch 200/351 | loss: 1.5382
+epoch: 06/30 | batch 300/351 | loss: 1.4911
+epoch: 06/30 train acc: 0.5848 valid acc: 0.5546
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 4.34 min
+epoch: 07/30 | batch 000/351 | loss: 1.5012
+epoch: 07/30 | batch 100/351 | loss: 1.1661
+epoch: 07/30 | batch 200/351 | loss: 1.4160
+epoch: 07/30 | batch 300/351 | loss: 1.3750
+epoch: 07/30 train acc: 0.5861 valid acc: 0.5712
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Saving model...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005.pt
+Time elapsed: 5.10 min
+epoch: 08/30 | batch 000/351 | loss: 1.3640
+epoch: 08/30 | batch 100/351 | loss: 1.3840
+epoch: 08/30 | batch 200/351 | loss: 1.3386
+epoch: 08/30 | batch 300/351 | loss: 1.6344
+epoch: 08/30 train acc: 0.5864 valid acc: 0.5616
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 5.39 min
+epoch: 09/30 | batch 000/351 | loss: 1.2280
+epoch: 09/30 | batch 100/351 | loss: 1.2957
+epoch: 09/30 | batch 200/351 | loss: 1.1442
+epoch: 09/30 | batch 300/351 | loss: 1.5028
+epoch: 09/30 train acc: 0.5853 valid acc: 0.5502
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 5.67 min
+epoch: 10/30 | batch 000/351 | loss: 1.1504
+epoch: 10/30 | batch 100/351 | loss: 1.4003
+epoch: 10/30 | batch 200/351 | loss: 1.2394
+epoch: 10/30 | batch 300/351 | loss: 1.3858
+epoch: 10/30 train acc: 0.5857 valid acc: 0.5520
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 5.96 min
+epoch: 11/30 | batch 000/351 | loss: 1.3867
+epoch: 11/30 | batch 100/351 | loss: 1.3749
+epoch: 11/30 | batch 200/351 | loss: 1.5042
+epoch: 11/30 | batch 300/351 | loss: 1.2564
+epoch: 11/30 train acc: 0.5888 valid acc: 0.5516
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 6.24 min
+epoch: 12/30 | batch 000/351 | loss: 1.2394
+epoch: 12/30 | batch 100/351 | loss: 1.3257
+epoch: 12/30 | batch 200/351 | loss: 1.1614
+epoch: 12/30 | batch 300/351 | loss: 1.4494
+epoch: 12/30 train acc: 0.5857 valid acc: 0.5602
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 6.52 min
+epoch: 13/30 | batch 000/351 | loss: 1.3325
+epoch: 13/30 | batch 100/351 | loss: 1.4921
+epoch: 13/30 | batch 200/351 | loss: 1.4720
+epoch: 13/30 | batch 300/351 | loss: 1.4487
+epoch: 13/30 train acc: 0.5889 valid acc: 0.5556
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 6.81 min
+epoch: 14/30 | batch 000/351 | loss: 1.1815
+epoch: 14/30 | batch 100/351 | loss: 1.2785
+epoch: 14/30 | batch 200/351 | loss: 1.3402
+epoch: 14/30 | batch 300/351 | loss: 1.4768
+epoch: 14/30 train acc: 0.5921 valid acc: 0.5576
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 7.10 min
+epoch: 15/30 | batch 000/351 | loss: 1.3725
+epoch: 15/30 | batch 100/351 | loss: 1.3252
+epoch: 15/30 | batch 200/351 | loss: 1.5230
+epoch: 15/30 | batch 300/351 | loss: 1.3449
+epoch: 15/30 train acc: 0.5895 valid acc: 0.5632
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 7.38 min
+epoch: 16/30 | batch 000/351 | loss: 1.3524
+epoch: 16/30 | batch 100/351 | loss: 1.4421
+epoch: 16/30 | batch 200/351 | loss: 1.3697
+epoch: 16/30 | batch 300/351 | loss: 1.2500
+epoch: 16/30 train acc: 0.5885 valid acc: 0.5520
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 7.66 min
+epoch: 17/30 | batch 000/351 | loss: 1.3254
+epoch: 17/30 | batch 100/351 | loss: 1.2845
+epoch: 17/30 | batch 200/351 | loss: 1.4038
+epoch: 17/30 | batch 300/351 | loss: 1.2016
+epoch: 17/30 train acc: 0.5944 valid acc: 0.5678
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 7.95 min
+epoch: 18/30 | batch 000/351 | loss: 1.3345
+epoch: 18/30 | batch 100/351 | loss: 1.3721
+epoch: 18/30 | batch 200/351 | loss: 1.2855
+epoch: 18/30 | batch 300/351 | loss: 1.4343
+epoch: 18/30 train acc: 0.5950 valid acc: 0.5646
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 8.24 min
+epoch: 19/30 | batch 000/351 | loss: 1.5263
+epoch: 19/30 | batch 100/351 | loss: 1.3387
+epoch: 19/30 | batch 200/351 | loss: 1.4955
+epoch: 19/30 | batch 300/351 | loss: 1.3902
+epoch: 19/30 train acc: 0.5866 valid acc: 0.5580
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 8.52 min
+epoch: 20/30 | batch 000/351 | loss: 1.3989
+epoch: 20/30 | batch 100/351 | loss: 1.3565
+epoch: 20/30 | batch 200/351 | loss: 1.4625
+epoch: 20/30 | batch 300/351 | loss: 1.4418
+epoch: 20/30 train acc: 0.5895 valid acc: 0.5670
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 8.82 min
+epoch: 21/30 | batch 000/351 | loss: 1.3934
+epoch: 21/30 | batch 100/351 | loss: 1.3649
+epoch: 21/30 | batch 200/351 | loss: 1.2688
+epoch: 21/30 | batch 300/351 | loss: 1.3483
+epoch: 21/30 train acc: 0.5893 valid acc: 0.5592
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 9.10 min
+epoch: 22/30 | batch 000/351 | loss: 1.2009
+epoch: 22/30 | batch 100/351 | loss: 1.2989
+epoch: 22/30 | batch 200/351 | loss: 1.4788
+epoch: 22/30 | batch 300/351 | loss: 1.5755
+epoch: 22/30 train acc: 0.5891 valid acc: 0.5624
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 9.39 min
+epoch: 23/30 | batch 000/351 | loss: 1.3397
+epoch: 23/30 | batch 100/351 | loss: 1.4161
+epoch: 23/30 | batch 200/351 | loss: 1.4331
+epoch: 23/30 | batch 300/351 | loss: 1.3349
+epoch: 23/30 train acc: 0.5882 valid acc: 0.5582
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 9.67 min
+epoch: 24/30 | batch 000/351 | loss: 1.2603
+epoch: 24/30 | batch 100/351 | loss: 1.3376
+epoch: 24/30 | batch 200/351 | loss: 1.4912
+epoch: 24/30 | batch 300/351 | loss: 1.4957
+epoch: 24/30 train acc: 0.5894 valid acc: 0.5550
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 9.96 min
+epoch: 25/30 | batch 000/351 | loss: 1.5011
+epoch: 25/30 | batch 100/351 | loss: 1.2908
+epoch: 25/30 | batch 200/351 | loss: 1.2956
+epoch: 25/30 | batch 300/351 | loss: 1.3029
+epoch: 25/30 train acc: 0.5953 valid acc: 0.5628
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 10.25 min
+epoch: 26/30 | batch 000/351 | loss: 1.4408
+epoch: 26/30 | batch 100/351 | loss: 1.3744
+epoch: 26/30 | batch 200/351 | loss: 1.6474
+epoch: 26/30 | batch 300/351 | loss: 1.5091
+epoch: 26/30 train acc: 0.5920 valid acc: 0.5632
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 10.54 min
+epoch: 27/30 | batch 000/351 | loss: 1.2622
+epoch: 27/30 | batch 100/351 | loss: 1.4640
+epoch: 27/30 | batch 200/351 | loss: 1.3047
+epoch: 27/30 | batch 300/351 | loss: 1.4100
+epoch: 27/30 train acc: 0.5974 valid acc: 0.5612
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 10.83 min
+epoch: 28/30 | batch 000/351 | loss: 1.3539
+epoch: 28/30 | batch 100/351 | loss: 1.2369
+epoch: 28/30 | batch 200/351 | loss: 1.3925
+epoch: 28/30 | batch 300/351 | loss: 1.5177
+epoch: 28/30 train acc: 0.5872 valid acc: 0.5596
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 11.11 min
+epoch: 29/30 | batch 000/351 | loss: 1.1465
+epoch: 29/30 | batch 100/351 | loss: 1.1901
+epoch: 29/30 | batch 200/351 | loss: 1.4060
+epoch: 29/30 | batch 300/351 | loss: 1.3466
+epoch: 29/30 train acc: 0.5946 valid acc: 0.5634
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 11.39 min
+epoch: 30/30 | batch 000/351 | loss: 1.2580
+epoch: 30/30 | batch 100/351 | loss: 1.3522
+epoch: 30/30 | batch 200/351 | loss: 1.4883
+epoch: 30/30 | batch 300/351 | loss: 1.3357
+epoch: 30/30 train acc: 0.5901 valid acc: 0.5546
+Saving loss...to CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005-loss.pt
+Time elapsed: 11.68 min
+Total training time: 11.68 min
+Loading data...Files already downloaded and verified
+test_size: 10000
+Loading model...from CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005.pt
+test acc: 0.6041
+Loading loss...from CIFAR10-vgg16-freeze30-batch128-epoch30-lr0.0005.pt
