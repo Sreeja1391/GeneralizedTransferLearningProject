@@ -1,0 +1,5 @@
+CIFAR10-resnet18-IMAGENET1K_V1-freeze17-batch64-epoch10-lr0.01
+CIFAR10-resnet18-IMAGENET1K_V1-freeze17-batch64-epoch10-lr0.01-loss
+CIFAR10-vgg16-IMAGENET1K_V1-freeze15-batch128-epoch10-lr0.0005
+Fruits360-resnet18-IMAGENET1K_V1-freeze17-batch64-epoch10-lr0.01
+Fruits360-vgg16-IMAGENET1K_V1-freeze15-batch128-epoch10-lr0.0005
