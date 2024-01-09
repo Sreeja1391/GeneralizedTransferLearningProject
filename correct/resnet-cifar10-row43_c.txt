@@ -1,0 +1,206 @@
+args: {'dataset': 'Fruits360', 'model_name': 'resnet18', 'model_weight': 'IMAGENET1K_V1', 'freeze_layers': 45, 'seed': 123, 'epochs': 10, 'use_gpu': True, 'train_valid_split': 0.1, 'filepath': '.pt', 'create_plot': True, 'batch_size': 64, 'lr': 0.01, 'early_stop': False, 'early_stop_patience': 3, 'loss_delta': 0.0001}
+Loading data...train_size: 60923 valid_size: 6769
+ 0 conv1.weight                 requires_grad = False  torch.Size([64, 3, 7, 7])
+ 1 bn1.weight                   requires_grad = False  torch.Size([64])
+ 2 bn1.bias                     requires_grad = False  torch.Size([64])
+ 3 layer1.0.conv1.weight        requires_grad = False  torch.Size([64, 64, 3, 3])
+ 4 layer1.0.bn1.weight          requires_grad = False  torch.Size([64])
+ 5 layer1.0.bn1.bias            requires_grad = False  torch.Size([64])
+ 6 layer1.0.conv2.weight        requires_grad = False  torch.Size([64, 64, 3, 3])
+ 7 layer1.0.bn2.weight          requires_grad = False  torch.Size([64])
+ 8 layer1.0.bn2.bias            requires_grad = False  torch.Size([64])
+ 9 layer1.1.conv1.weight        requires_grad = False  torch.Size([64, 64, 3, 3])
+10 layer1.1.bn1.weight          requires_grad = False  torch.Size([64])
+11 layer1.1.bn1.bias            requires_grad = False  torch.Size([64])
+12 layer1.1.conv2.weight        requires_grad = False  torch.Size([64, 64, 3, 3])
+13 layer1.1.bn2.weight          requires_grad = False  torch.Size([64])
+14 layer1.1.bn2.bias            requires_grad = False  torch.Size([64])
+15 layer2.0.conv1.weight        requires_grad = False  torch.Size([128, 64, 3, 3])
+16 layer2.0.bn1.weight          requires_grad = False  torch.Size([128])
+17 layer2.0.bn1.bias            requires_grad = False  torch.Size([128])
+18 layer2.0.conv2.weight        requires_grad = False  torch.Size([128, 128, 3, 3])
+19 layer2.0.bn2.weight          requires_grad = False  torch.Size([128])
+20 layer2.0.bn2.bias            requires_grad = False  torch.Size([128])
+21 layer2.0.downsample.0.weight requires_grad = False  torch.Size([128, 64, 1, 1])
+22 layer2.0.downsample.1.weight requires_grad = False  torch.Size([128])
+23 layer2.0.downsample.1.bias   requires_grad = False  torch.Size([128])
+24 layer2.1.conv1.weight        requires_grad = False  torch.Size([128, 128, 3, 3])
+25 layer2.1.bn1.weight          requires_grad = False  torch.Size([128])
+26 layer2.1.bn1.bias            requires_grad = False  torch.Size([128])
+27 layer2.1.conv2.weight        requires_grad = False  torch.Size([128, 128, 3, 3])
+28 layer2.1.bn2.weight          requires_grad = False  torch.Size([128])
+29 layer2.1.bn2.bias            requires_grad = False  torch.Size([128])
+30 layer3.0.conv1.weight        requires_grad = False  torch.Size([256, 128, 3, 3])
+31 layer3.0.bn1.weight          requires_grad = False  torch.Size([256])
+32 layer3.0.bn1.bias            requires_grad = False  torch.Size([256])
+33 layer3.0.conv2.weight        requires_grad = False  torch.Size([256, 256, 3, 3])
+34 layer3.0.bn2.weight          requires_grad = False  torch.Size([256])
+35 layer3.0.bn2.bias            requires_grad = False  torch.Size([256])
+36 layer3.0.downsample.0.weight requires_grad = False  torch.Size([256, 128, 1, 1])
+37 layer3.0.downsample.1.weight requires_grad = False  torch.Size([256])
+38 layer3.0.downsample.1.bias   requires_grad = False  torch.Size([256])
+39 layer3.1.conv1.weight        requires_grad = False  torch.Size([256, 256, 3, 3])
+40 layer3.1.bn1.weight          requires_grad = False  torch.Size([256])
+41 layer3.1.bn1.bias            requires_grad = False  torch.Size([256])
+42 layer3.1.conv2.weight        requires_grad = False  torch.Size([256, 256, 3, 3])
+43 layer3.1.bn2.weight          requires_grad = False  torch.Size([256])
+44 layer3.1.bn2.bias            requires_grad = False  torch.Size([256])
+45 layer4.0.conv1.weight        requires_grad = True  torch.Size([512, 256, 3, 3])
+46 layer4.0.bn1.weight          requires_grad = True  torch.Size([512])
+47 layer4.0.bn1.bias            requires_grad = True  torch.Size([512])
+48 layer4.0.conv2.weight        requires_grad = True  torch.Size([512, 512, 3, 3])
+49 layer4.0.bn2.weight          requires_grad = True  torch.Size([512])
+50 layer4.0.bn2.bias            requires_grad = True  torch.Size([512])
+51 layer4.0.downsample.0.weight requires_grad = True  torch.Size([512, 256, 1, 1])
+52 layer4.0.downsample.1.weight requires_grad = True  torch.Size([512])
+53 layer4.0.downsample.1.bias   requires_grad = True  torch.Size([512])
+54 layer4.1.conv1.weight        requires_grad = True  torch.Size([512, 512, 3, 3])
+55 layer4.1.bn1.weight          requires_grad = True  torch.Size([512])
+56 layer4.1.bn1.bias            requires_grad = True  torch.Size([512])
+57 layer4.1.conv2.weight        requires_grad = True  torch.Size([512, 512, 3, 3])
+58 layer4.1.bn2.weight          requires_grad = True  torch.Size([512])
+59 layer4.1.bn2.bias            requires_grad = True  torch.Size([512])
+60 fc.weight                    requires_grad = True  torch.Size([131, 512])
+61 fc.bias                      requires_grad = True  torch.Size([131])
+
+epoch: 01/10 | batch 000/951 | loss: 5.1591
+epoch: 01/10 | batch 100/951 | loss: 0.5419
+epoch: 01/10 | batch 200/951 | loss: 0.3386
+epoch: 01/10 | batch 300/951 | loss: 0.2000
+epoch: 01/10 | batch 400/951 | loss: 0.0501
+epoch: 01/10 | batch 500/951 | loss: 0.0508
+epoch: 01/10 | batch 600/951 | loss: 0.1212
+epoch: 01/10 | batch 700/951 | loss: 0.0842
+epoch: 01/10 | batch 800/951 | loss: 0.0823
+epoch: 01/10 | batch 900/951 | loss: 0.0401
+epoch: 01/10 train acc: 0.9858 valid acc: 0.9851
+Saving loss...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01-loss.pt
+Saving model...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01.pt
+Time elapsed: 12.23 min
+epoch: 02/10 | batch 000/951 | loss: 0.2402
+epoch: 02/10 | batch 100/951 | loss: 0.0059
+epoch: 02/10 | batch 200/951 | loss: 0.0626
+epoch: 02/10 | batch 300/951 | loss: 0.0060
+epoch: 02/10 | batch 400/951 | loss: 0.0010
+epoch: 02/10 | batch 500/951 | loss: 0.1537
+epoch: 02/10 | batch 600/951 | loss: 0.0013
+epoch: 02/10 | batch 700/951 | loss: 0.1783
+epoch: 02/10 | batch 800/951 | loss: 0.0211
+epoch: 02/10 | batch 900/951 | loss: 0.0025
+epoch: 02/10 train acc: 0.9940 valid acc: 0.9942
+Saving loss...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01-loss.pt
+Saving model...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01.pt
+Time elapsed: 15.42 min
+epoch: 03/10 | batch 000/951 | loss: 0.0122
+epoch: 03/10 | batch 100/951 | loss: 0.0321
+epoch: 03/10 | batch 200/951 | loss: 0.2788
+epoch: 03/10 | batch 300/951 | loss: 0.0532
+epoch: 03/10 | batch 400/951 | loss: 0.0361
+epoch: 03/10 | batch 500/951 | loss: 0.3140
+epoch: 03/10 | batch 600/951 | loss: 0.0986
+epoch: 03/10 | batch 700/951 | loss: 0.0140
+epoch: 03/10 | batch 800/951 | loss: 0.0339
+epoch: 03/10 | batch 900/951 | loss: 0.0066
+epoch: 03/10 train acc: 0.9952 valid acc: 0.9951
+Saving loss...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01-loss.pt
+Saving model...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01.pt
+Time elapsed: 17.57 min
+epoch: 04/10 | batch 000/951 | loss: 0.0356
+epoch: 04/10 | batch 100/951 | loss: 0.0250
+epoch: 04/10 | batch 200/951 | loss: 0.0025
+epoch: 04/10 | batch 300/951 | loss: 0.0234
+epoch: 04/10 | batch 400/951 | loss: 0.0021
+epoch: 04/10 | batch 500/951 | loss: 0.0185
+epoch: 04/10 | batch 600/951 | loss: 0.1198
+epoch: 04/10 | batch 700/951 | loss: 0.0813
+epoch: 04/10 | batch 800/951 | loss: 0.0077
+epoch: 04/10 | batch 900/951 | loss: 0.0059
+epoch: 04/10 train acc: 0.9986 valid acc: 0.9979
+Saving loss...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01-loss.pt
+Saving model...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01.pt
+Time elapsed: 21.12 min
+epoch: 05/10 | batch 000/951 | loss: 0.0043
+epoch: 05/10 | batch 100/951 | loss: 0.1073
+epoch: 05/10 | batch 200/951 | loss: 0.0474
+epoch: 05/10 | batch 300/951 | loss: 0.0037
+epoch: 05/10 | batch 400/951 | loss: 0.0009
+epoch: 05/10 | batch 500/951 | loss: 0.0135
+epoch: 05/10 | batch 600/951 | loss: 0.0230
+epoch: 05/10 | batch 700/951 | loss: 0.1467
+epoch: 05/10 | batch 800/951 | loss: 0.0195
+epoch: 05/10 | batch 900/951 | loss: 0.0019
+epoch: 05/10 train acc: 0.9945 valid acc: 0.9954
+Saving loss...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01-loss.pt
+Time elapsed: 23.31 min
+epoch: 06/10 | batch 000/951 | loss: 0.0605
+epoch: 06/10 | batch 100/951 | loss: 0.0108
+epoch: 06/10 | batch 200/951 | loss: 0.0009
+epoch: 06/10 | batch 300/951 | loss: 0.0000
+epoch: 06/10 | batch 400/951 | loss: 0.0170
+epoch: 06/10 | batch 500/951 | loss: 0.1757
+epoch: 06/10 | batch 600/951 | loss: 0.0843
+epoch: 06/10 | batch 700/951 | loss: 0.0645
+epoch: 06/10 | batch 800/951 | loss: 0.0137
+epoch: 06/10 | batch 900/951 | loss: 0.0817
+epoch: 06/10 train acc: 0.9964 valid acc: 0.9966
+Saving loss...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01-loss.pt
+Time elapsed: 26.45 min
+epoch: 07/10 | batch 000/951 | loss: 0.0004
+epoch: 07/10 | batch 100/951 | loss: 0.0053
+epoch: 07/10 | batch 200/951 | loss: 0.0669
+epoch: 07/10 | batch 300/951 | loss: 0.0027
+epoch: 07/10 | batch 400/951 | loss: 0.0001
+epoch: 07/10 | batch 500/951 | loss: 0.0309
+epoch: 07/10 | batch 600/951 | loss: 0.0008
+epoch: 07/10 | batch 700/951 | loss: 0.0129
+epoch: 07/10 | batch 800/951 | loss: 0.0310
+epoch: 07/10 | batch 900/951 | loss: 0.0005
+epoch: 07/10 train acc: 0.9993 valid acc: 0.9991
+Saving loss...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01-loss.pt
+Saving model...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01.pt
+Time elapsed: 28.65 min
+epoch: 08/10 | batch 000/951 | loss: 0.0027
+epoch: 08/10 | batch 100/951 | loss: 0.0327
+epoch: 08/10 | batch 200/951 | loss: 0.0090
+epoch: 08/10 | batch 300/951 | loss: 0.0075
+epoch: 08/10 | batch 400/951 | loss: 0.0053
+epoch: 08/10 | batch 500/951 | loss: 0.0003
+epoch: 08/10 | batch 600/951 | loss: 0.0121
+epoch: 08/10 | batch 700/951 | loss: 0.0392
+epoch: 08/10 | batch 800/951 | loss: 0.0119
+epoch: 08/10 | batch 900/951 | loss: 0.0007
+epoch: 08/10 train acc: 0.9880 valid acc: 0.9894
+Saving loss...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01-loss.pt
+Time elapsed: 31.60 min
+epoch: 09/10 | batch 000/951 | loss: 0.0877
+epoch: 09/10 | batch 100/951 | loss: 0.0146
+epoch: 09/10 | batch 200/951 | loss: 0.0111
+epoch: 09/10 | batch 300/951 | loss: 0.0131
+epoch: 09/10 | batch 400/951 | loss: 0.0001
+epoch: 09/10 | batch 500/951 | loss: 0.0053
+epoch: 09/10 | batch 600/951 | loss: 0.0018
+epoch: 09/10 | batch 700/951 | loss: 0.0001
+epoch: 09/10 | batch 800/951 | loss: 0.0001
+epoch: 09/10 | batch 900/951 | loss: 0.0012
+epoch: 09/10 train acc: 0.9985 valid acc: 0.9984
+Saving loss...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01-loss.pt
+Time elapsed: 33.78 min
+epoch: 10/10 | batch 000/951 | loss: 0.0004
+epoch: 10/10 | batch 100/951 | loss: 0.1073
+epoch: 10/10 | batch 200/951 | loss: 0.0508
+epoch: 10/10 | batch 300/951 | loss: 0.0012
+epoch: 10/10 | batch 400/951 | loss: 0.0029
+epoch: 10/10 | batch 500/951 | loss: 0.0016
+epoch: 10/10 | batch 600/951 | loss: 0.0041
+epoch: 10/10 | batch 700/951 | loss: 0.0010
+epoch: 10/10 | batch 800/951 | loss: 0.0023
+epoch: 10/10 | batch 900/951 | loss: 0.0095
+epoch: 10/10 train acc: 0.9995 valid acc: 0.9993
+Saving loss...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01-loss.pt
+Saving model...to Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01.pt
+Time elapsed: 36.78 min
+Total training time: 36.78 min
+Loading data...test_size: 22688
+Loading model...from Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01.pt
+test acc: 0.9857
+Loading loss...from Fruits360-resnet18-freeze45-batch64-epoch10-lr0.01.pt
